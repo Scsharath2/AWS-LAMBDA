@@ -1,8 +1,9 @@
 We will create an IAM Role to enable the CloudWatch logs and
 to start and stop the RDS instance
 
-Login into IAM console and click on create policy.
-Paste the following in JSON editor and give policy name as 
+Login into console, In IAM click on create policy.
+Paste the following in JSON editor and give policy name something like
+policy_start_stop_RDS along with some description
 
 {
     "Version": "2012-10-17",
