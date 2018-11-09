@@ -1,0 +1,4 @@
+Select RDS from Service console and select to create a new instance
+Select the engine in my case it is MS SQL Server and express edition. Click Next
+Specify the DB details(All Mandatory fields), click next
+In the next step, create the data base
