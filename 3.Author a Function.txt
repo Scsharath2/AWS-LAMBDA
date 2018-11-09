@@ -1,0 +1,23 @@
+Note: Lambda function and DBInstance should be in same region.
+Open the Lambda console and create function and author from scratch
+Below are the configuration to create lambda function.
+  Name: RDSInstanceStop
+  Runtime:  Python 2.7
+  Role: Choose an existing role
+  Role Name: Lambda-start-stop-rds and click on Create Function
+A new Lambda function will be created and note down thw ARN which is on top right
+
+Return to the role created and add attach inline policy. add below JSON and make
+sure to replace the Resource.
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "lambda:GetFunctionConfiguration",
+            "Resource": "arn:aws:lambda:<region>:<Account_id>:function:RDSInstanceStop"
+        }
+    ]
+}
+Assign some name like "policy_rds_stop " and click on save 
