@@ -28,3 +28,7 @@ policy_start_stop_RDS along with some description
         }
     ]
 }
+
+Next create role from IAM console
+Choose AWS Services lamdba as your service
+Attach the Policy to the role and provide name 
