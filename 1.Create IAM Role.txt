@@ -1,0 +1,29 @@
+We will create an IAM Role to enable the CloudWatch logs and
+to start and stop the RDS instance
+
+Login into IAM console and click on create policy.
+Paste the following in JSON editor and give policy name as 
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "rds:DescribeDBInstances",
+                "rds:StopDBInstance",
+                "rds:StartDBInstance"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
